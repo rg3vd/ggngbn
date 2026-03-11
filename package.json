@@ -4,9 +4,10 @@
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start --dev-client --lan",
     "android": "expo run:android",
     "ios": "expo run:ios",
+    "postinstall": "node scripts/patch-rn-cli-status-header.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -56,3 +57,5 @@
     "typescript": "~5.3.3"
   }
 }
+
+
