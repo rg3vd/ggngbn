@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
 
@@ -236,7 +236,7 @@ export default function Screen03Dashboard() {
             <CyberpunkCard onPress={() => router.push({ pathname: '/(screens)/screen_21_goal_detail', params: { id: activeGoal.id } })}>
               <View style={styles.heroBackdrop}>
                 <ImageBackground 
-                  source={require('@/assets/images/victory-setup.jpg')} 
+                  source={require('../../assets/images/victory-setup.jpg')} 
                   style={styles.heroImage}
                   resizeMode="cover"
                 >

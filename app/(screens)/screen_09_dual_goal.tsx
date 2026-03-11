@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
 
@@ -68,7 +68,7 @@ export default function Screen09DualGoal() {
               <CyberpunkCard key={goal.id}>
                 <View style={styles.goalCardBackdrop}>
                   <ImageBackground 
-                    source={require('@/assets/images/victory-setup.jpg')} 
+                    source={require('../../assets/images/victory-setup.jpg')} 
                     style={styles.goalCardImage}
                     resizeMode="cover"
                   >

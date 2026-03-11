@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import ConfettiCannon from 'react-native-confetti-cannon';
@@ -49,7 +49,7 @@ export default function Screen10Victory() {
   return (
     <View style={styles.screen}>
       <ImageBackground 
-        source={require('@/assets/images/victory-setup.jpg')} 
+        source={require('../../assets/images/victory-setup.jpg')} 
         style={styles.victoryImage}
         resizeMode="cover"
       >

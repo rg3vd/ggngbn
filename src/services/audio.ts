@@ -1,24 +1,24 @@
-﻿import { Audio } from 'expo-av';
+import { Audio } from 'expo-av';
 
 import { useSettingsStore } from '@/store/settingsStore';
 
 const soundAssets = {
-  buttonTap: require('@/assets/sounds/button-tap.mp3'),
-  coinDrop: require('@/assets/sounds/coin-drop.mp3'),
-  successChime: require('@/assets/sounds/success-chime.mp3'),
-  victory: require('@/assets/sounds/victory.mp3'),
-  alert: require('@/assets/sounds/alert.mp3'),
-  unlock: require('@/assets/sounds/unlock.mp3'),
-  navigation: require('@/assets/sounds/navigation.mp3'),
-  error: require('@/assets/sounds/error.mp3'),
-  modal: require('@/assets/sounds/modal.mp3'),
-  achievement: require('@/assets/sounds/achievement.mp3'),
-  celebration: require('@/assets/sounds/celebration.mp3'),
-  save: require('@/assets/sounds/save.mp3'),
-  delete: require('@/assets/sounds/delete.mp3'),
+  buttonTap: require('../../assets/sounds/button-tap.mp3'),
+  coinDrop: require('../../assets/sounds/coin-drop.mp3'),
+  successChime: require('../../assets/sounds/success-chime.mp3'),
+  victory: require('../../assets/sounds/victory.mp3'),
+  alert: require('../../assets/sounds/alert.mp3'),
+  unlock: require('../../assets/sounds/unlock.mp3'),
+  navigation: require('../../assets/sounds/navigation.mp3'),
+  error: require('../../assets/sounds/error.mp3'),
+  modal: require('../../assets/sounds/modal.mp3'),
+  achievement: require('../../assets/sounds/achievement.mp3'),
+  celebration: require('../../assets/sounds/celebration.mp3'),
+  save: require('../../assets/sounds/save.mp3'),
+  delete: require('../../assets/sounds/delete.mp3'),
   // Нові звуки для кіберпанк-атмосфери та механіки розшуку
-  wantedLevelUp: require('@/assets/sounds/wanted-level-up.mp3'),
-  cyberSwipe: require('@/assets/sounds/cyber-swipe.mp3'),
+  wantedLevelUp: require('../../assets/sounds/wanted-level-up.mp3'),
+  cyberSwipe: require('../../assets/sounds/cyber-swipe.mp3'),
 } as const;
 
 type UiSoundEvent = keyof typeof soundAssets;
