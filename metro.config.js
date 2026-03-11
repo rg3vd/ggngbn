@@ -1,4 +1,5 @@
 ﻿const { getDefaultConfig } = require('expo/metro-config');
+const path = require('path');
 
 const config = getDefaultConfig(__dirname);
 const { assetExts, sourceExts } = config.resolver;
@@ -7,5 +8,21 @@ config.transformer.babelTransformerPath = require.resolve('react-native-svg-tran
 config.resolver.assetExts = assetExts.filter((ext) => ext !== 'svg');
 config.resolver.sourceExts = [...sourceExts, 'svg'];
 
-// In some restricted Windows environments, spawning worker processes can fail (EPERM).\r\n// Enable worker threads; optionally set METRO_MAX_WORKERS=1 if needed.\r\nconfig.transformer.unstable_workerThreads = true;\r\nif (process.env.METRO_MAX_WORKERS) {\r\n  config.maxWorkers = Number(process.env.METRO_MAX_WORKERS);\r\n}\r\n\r\n
+// Avoid scanning Expo export output / generated bundles (can cause EPERM on Windows).
+const distDir = path.resolve(__dirname, 'dist');
+const escapedDistDir = distDir.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const distBlockList = new RegExp(`${escapedDistDir}(?:\\|/).*`);
+const existingBlockList = config.resolver.blockList;
+config.resolver.blockList = new RegExp(`${existingBlockList.source}|${distBlockList.source}`);
+
+// In some restricted Windows environments, spawning worker processes can fail (EPERM).
+// Enable worker threads; optionally set METRO_MAX_WORKERS=1 if needed.
+config.transformer.unstable_workerThreads = true;
+if (process.env.METRO_MAX_WORKERS) {
+  const max = Number(process.env.METRO_MAX_WORKERS);
+  if (!Number.isNaN(max) && max > 0) {
+    config.maxWorkers = max;
+  }
+}
+
 module.exports = config;
