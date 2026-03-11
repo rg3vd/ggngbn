@@ -34,6 +34,11 @@ jobs:
       - name: Install JS deps
         run: npm ci
 
+      - name: Expo prebuild (generate android/)
+        run: npx expo prebuild --platform android --clean --no-install --non-interactive
+        env:
+          CI: "1"
+
       - name: Gradle assembleDebug
         run: |
           chmod +x android/gradlew
