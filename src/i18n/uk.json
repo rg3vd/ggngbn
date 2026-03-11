@@ -1,0 +1,46 @@
+﻿{
+  "common": {
+    "continue": "Продовжити",
+    "back": "Назад",
+    "save": "Зберегти",
+    "cancel": "Скасувати",
+    "loading": "Завантаження",
+    "empty": "Поки порожньо"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "analytics": "Аналітика",
+    "history": "Історія",
+    "achievements": "Досягнення",
+    "profile": "Профіль"
+  },
+  "onboarding": {
+    "title": "Скарбничка мрії",
+    "subtitle": "Перетвори накопичення на місію",
+    "nicknamePlaceholder": "AGENT_NAME",
+    "chooseLanguage": "Оберіть мову",
+    "chooseGoal": "Обери ціль"
+  },
+  "dashboard": {
+    "emptyTitle": "Створити першу ціль",
+    "customAmount": "Своя сума",
+    "daysToGoal": "днів до цілі",
+    "currentStreak": "поточний streak"
+  },
+  "deposit": {
+    "title": "Нове поповнення",
+    "amount": "Сума",
+    "comment": "Коментар",
+    "date": "Дата",
+    "confirm": "Підтвердити",
+    "errorInvalid": "Введіть коректну суму"
+  },
+  "profile": {
+    "title": "Профіль",
+    "theme": "Тема",
+    "notifications": "Сповіщення",
+    "sound": "Звук",
+    "haptics": "Вібрація",
+    "language": "Мова"
+  }
+}

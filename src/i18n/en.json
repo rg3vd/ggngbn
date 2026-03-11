@@ -1,0 +1,46 @@
+﻿{
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading",
+    "empty": "Nothing here yet"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "history": "History",
+    "achievements": "Achievements",
+    "profile": "Profile"
+  },
+  "onboarding": {
+    "title": "Dream Piggy Bank",
+    "subtitle": "Turn saving into a mission",
+    "nicknamePlaceholder": "AGENT_NAME",
+    "chooseLanguage": "Choose language",
+    "chooseGoal": "Choose your goal"
+  },
+  "dashboard": {
+    "emptyTitle": "Create your first goal",
+    "customAmount": "Custom amount",
+    "daysToGoal": "days to goal",
+    "currentStreak": "current streak"
+  },
+  "deposit": {
+    "title": "New deposit",
+    "amount": "Amount",
+    "comment": "Comment",
+    "date": "Date",
+    "confirm": "Confirm",
+    "errorInvalid": "Enter a valid amount"
+  },
+  "profile": {
+    "title": "Profile",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "sound": "Sound",
+    "haptics": "Haptics",
+    "language": "Language"
+  }
+}

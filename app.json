@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Скарбничка мрії",
+    "slug": "skarbna-mrii",
+    "version": "1.0.0",
+    "scheme": "skarbna-mrii",
+    "icon": "./ІД/icon.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "package": "com.skarbna.mrii",
+      "minSdkVersion": 21,
+      "permissions": [
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "sounds": []
+        }
+      ],
+      "expo-av",
+      "expo-secure-store"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cdf7facf-06e3-46fd-bb54-a0db548277dd"
+      }
+    }
+  }
+}
